@@ -1,0 +1,42 @@
+<svelte:head>
+  <title>About me - luciano@ratamero.com</title>
+</svelte:head>
+
+<script>
+  import eu3x from "$lib/img/eu-3x.jpg";
+
+  const birthday = new Date("1989-06-15");
+  const month_diff = Date.now() - birthday.getTime();
+  const age_dt = new Date(month_diff);
+  const year = age_dt.getUTCFullYear();
+  const age = Math.abs(year - 1970);
+</script>
+
+# About Luciano
+
+<img class="rounded-lg block mx-auto" src={eu3x} alt="Luciano in a raccoon onesie." />
+
+Hi, my name is Luciano Ratamero (he/him), I'm {age} years old, and I currently live in Recife, Brazil. :]
+
+I love reading, writing, playing videogames, listening to music, and watching streams on Twitch.
+
+I'm a JavaScript and Python web developer, working mainly on the frontend. I've worked with a lot of tehcnologies over the years, including React, Django and Svelte.
+
+Currently, I'm developing apps for [Lincoln Loop](https://lincolnloop.com/) and training devs at [Labcodes](https://labcodes.com.br/), so their awesome team becomes even better at frontend. I also sometimes make some videos on [YouTube](https://www.youtube.com/channel/UCYBAN_yOwqKG6tlaPHvROqg).
+
+Feel free to take a look around! I leave a lot of notes on things I'm interested about, so I hove they're of use to you.
+
+## Links
+
+- [twitter](https://twitter.com/lucianoratamero)
+- [github](https://github.com/lucianoratamero/)
+- [youtube](https://www.youtube.com/channel/UCYBAN_yOwqKG6tlaPHvROqg)
+- [twitch](https://www.twitch.tv/luciano_ratamero)
+- [linkedin](https://www.linkedin.com/in/luciano-ratamero-06b98b32/)
+- [lastfm](https://www.last.fm/user/lucianoratamero)
+
+<style>
+  img {
+    height: 25vh;
+  }
+</style>
