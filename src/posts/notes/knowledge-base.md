@@ -1,7 +1,7 @@
 ---
 date: 2022-03-28
 description: ''
-slug: knowledge base
+slug: knowledge-base
 title: Knowledge base
 updated_at: 2022-03-28
 ---

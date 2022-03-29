@@ -2,7 +2,7 @@
 date: 2022-03-28
 description: I tried to find a good reference for this one, but most are coach stuff,
   so I thought it would be better for me to just write it down.
-slug: the benefits of writing things down
+slug: the-benefits-of-writing-things-down
 title: The benefits of writing things down
 updated_at: 2022-03-28
 ---
