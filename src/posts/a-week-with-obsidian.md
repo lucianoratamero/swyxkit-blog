@@ -13,7 +13,7 @@ updated_at: 2022-03-28
 It's been a week since I started using Obsidian. It sells itself as a "second brain" app, and I must say: until now, it has not disappointed. Come with me and you'll see that it's not just about productivity, but about being healthier. :]   
    
 ## What is Obsidian?   
-[Obsidian](https://obsidian.md/) is mostly a text editor, and it was made for you to organize your thoughts, research topics, writings, anything. The general idea is that you write simple [Markdown](./notes/Markdown) files, which is plenty for most writing scenarios, and link them together, effectively making a [knowledge-base](./notes/knowledge-base).   
+[Obsidian](https://obsidian.md/) is mostly a text editor, and it was made for you to organize your thoughts, research topics, writings, anything. The general idea is that you write simple [Markdown](./notes/Markdown) files, which is plenty for most writing scenarios, and link them together, effectively making a [knowledge base](./notes/knowledge-base).   
    
 That way, you can slowly build a graph of what you know about a topic. The simple linking of your documents is enough to make a rough map of what's on your brain.   
    
@@ -35,7 +35,7 @@ When you're done with your notes, or if you want to have a better idea on what t
 ![Graph of notes that link to each other](./assets/obsidian-graph.png)   
 It not only helps a lot on visualizing how things relate to each other, but it gives us a better sense on how much we've accomplished with our learnings - and I love this feeling of accomplishment. It gives me more confidence that I really worked hard on something, and that, if I need my notes on that, they're there.   
    
-Oh, and I think I don't need to tell you about [the-benefits-of-writing-things-down](./notes/the-benefits-of-writing-things-down), right?   
+Oh, and I think I don't need to tell you about [the benefits of writing things down](./notes/the-benefits-of-writing-things-down), right?   
    
 ### Work related notes    
 I need to be frank: my memory sucks. It's **so** bad. To mitigate that...*characteristic*, a couple of years ago I started taking small notes, even if not entirely accurate, about what happened at meetings, or about project roadmaps, anything I thought that was useful or that I was sure I'd forget.   
