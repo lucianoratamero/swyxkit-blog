@@ -86,13 +86,13 @@
     >
   </div>
   {#if !search}
-    <h3 class="mt-8 mb-4 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
+    <h2 class="mt-8 mb-4 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
       All Posts
-    </h3>
+    </h2>
   {:else}
-    <h3 class="mt-8 mb-4 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
+    <h2 class="mt-8 mb-4 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
       Searching by {search}
-    </h3>
+    </h2>
   {/if}
   {#if list.length}
     <ul id="skip" class="w-full">
