@@ -1,6 +1,8 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "luciano@ratamero.com",
+    "short_name": "ratamero.com",
+    "start_url": "/",
+    "description": "Luciano Ratamero's site. Here are some of my notes, opinions and findings about technology, frontend development and... mostly anything.",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -10,6 +12,11 @@
         {
             "src": "/android-chrome-256x256.png",
             "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/logo-512.png",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ],
