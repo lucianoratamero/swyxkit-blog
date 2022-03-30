@@ -140,8 +140,12 @@
         top: -3rem;
         --tw-translate-y: -3rem;
         padding: 0.75rem 1rem;
-        transition-property: transform;
+        transition-property: top;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 0.2s;
+    }
+
+    .skip-nav:focus {
+        top: 1rem;
     }
 </style>
