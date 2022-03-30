@@ -1,6 +1,6 @@
-import { timestamp, build } from '$service-worker';
+import { version, build } from '$service-worker';
 
-const name = `cache-${timestamp}`;
+const name = `cache-${version}`;
 
 self.addEventListener('install', (event) => {
 	// @ts-expect-error
@@ -12,7 +12,7 @@ self.addEventListener('activate', (event) => {
 	event.waitUntil(
 		caches.keys().then(async (keys) => {
 			for (const key of keys) {
-				if (!key.includes(String(timestamp))) caches.delete(key);
+				if (!key.includes(String(version))) caches.delete(key);
 			}
 		})
 	);
