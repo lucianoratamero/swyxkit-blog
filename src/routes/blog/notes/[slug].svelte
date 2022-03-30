@@ -16,7 +16,6 @@
 </script>
 
 <script>
-  import "prism-themes/themes/prism-shades-of-purple.min.css";
   import { MY_TWITTER_HANDLE, SITE_URL, DEFAULT_OG_IMAGE } from "$lib/siteConfig";
   import dayjs from "dayjs";
 
