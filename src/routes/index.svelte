@@ -67,7 +67,7 @@
     </div>
   </div>
 
-  <section class="mb-16 w-full">
+  <section id="skip" class="mb-16 w-full">
     <h3 class="mb-6 text-2xl font-bold tracking-tight text-black dark:text-white md:text-4xl">
       Featured Posts
     </h3>

@@ -14,7 +14,7 @@
 
 # About Luciano
 
-<img class="rounded-lg block mx-auto" src={eu3x} alt="Luciano in a raccoon onesie." />
+<img id="skip" class="rounded-lg block mx-auto" src={eu3x} alt="Luciano in a raccoon onesie." />
 
 Hi, my name is Luciano Ratamero (he/him), I'm {age} years old, and I currently live in Recife, Brazil. :]
 

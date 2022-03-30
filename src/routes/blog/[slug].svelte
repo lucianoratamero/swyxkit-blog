@@ -44,6 +44,7 @@
 </svelte:head>
 
 <article
+  id="skip"
   class="mx-auto mb-16 flex w-full max-w-3xl flex-col items-start justify-center sm:px-8"
 >
   <h1 class="mb-8 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl ">

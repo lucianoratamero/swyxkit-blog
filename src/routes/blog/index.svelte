@@ -95,7 +95,7 @@
     </h3>
   {/if}
   {#if list.length}
-    <ul class="w-full">
+    <ul id="skip" class="w-full">
       {#each list as item}
         <li class="mb-8 text-lg">
           <IndexCard
