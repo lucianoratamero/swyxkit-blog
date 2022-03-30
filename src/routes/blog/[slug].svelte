@@ -15,6 +15,7 @@
   import "prism-themes/themes/prism-shades-of-purple.min.css";
   import { MY_TWITTER_HANDLE, SITE_URL } from "$lib/siteConfig";
   import dayjs from "dayjs";
+  import { DEFAULT_OG_IMAGE } from "$lib/siteConfig.js";
 
   /** @type {import("$lib/types.js").ContentItem} */
   export let metadata, content; // warning: if you try to destructure content here, make sure to make it reactive, or your page content will not update when your user navigates
@@ -36,6 +37,9 @@
   {#if metadata.image}
     <meta property="og:image" content={metadata.image} />
     <meta name="twitter:image" content={metadata.image} />
+  {:else}
+    <meta property="og:image" content={DEFAULT_OG_IMAGE} />
+    <meta name="twitter:image" content={DEFAULT_OG_IMAGE} />
   {/if}
 </svelte:head>
 

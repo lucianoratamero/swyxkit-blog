@@ -17,7 +17,7 @@
 
 <script>
   import "prism-themes/themes/prism-shades-of-purple.min.css";
-  import { MY_TWITTER_HANDLE, SITE_URL } from "$lib/siteConfig";
+  import { MY_TWITTER_HANDLE, SITE_URL, DEFAULT_OG_IMAGE } from "$lib/siteConfig";
   import dayjs from "dayjs";
 
   /** @type {import("$lib/types.js").ContentItem} */
@@ -40,10 +40,14 @@
   {#if metadata.image}
     <meta property="og:image" content={metadata.image} />
     <meta name="twitter:image" content={metadata.image} />
+  {:else}
+    <meta property="og:image" content={DEFAULT_OG_IMAGE} />
+    <meta name="twitter:image" content={DEFAULT_OG_IMAGE} />
   {/if}
 </svelte:head>
 
 <article
+  id="skip"
   class="mx-auto mb-16 flex w-full max-w-3xl flex-col items-start justify-center sm:px-8"
 >
   <h1 class="mb-8 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl ">
