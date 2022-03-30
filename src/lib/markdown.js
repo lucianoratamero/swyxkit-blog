@@ -12,6 +12,7 @@ import yaml from "js-yaml";
 import dayjs from "dayjs";
 import _ from "lodash";
 import rehypeSlug from "rehype-slug";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 let parser = unified()
   .use(parse)
@@ -22,6 +23,9 @@ let runner = unified()
   .use(remark2rehype)
   .use(highlight, { aliases: { "markdown": "ad-info" } })
   .use(rehypeSlug)
+  .use(rehypeAutolinkHeadings, {
+    behavior: "wrap"
+  })
   .use(rehypeStringify);
 
 export function process(filename) {
