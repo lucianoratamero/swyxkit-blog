@@ -10,7 +10,7 @@ title: 'Git e github parte 1: o que são e como usar'
 updated_at: 2022-03-28
 ---
    
-![Logos do Git e do Github](./assets/git-and-github-logos.png)   
+![Logos do Git e do Github](/blog/assets/git-and-github-logos.png)   
    
 hoje eu tava conversando com uns amigos sobre git e github e percebemos um problema: não temos atualmente um lugar com conteúdo sobre os dois em português, principalmente para leigos ou iniciantes. depois de pegar com o pessoal uns pontos importantes, decidi fazer alguns posts sobre o assunto, para servir de referência. aí vamos nós o/   
    
@@ -52,7 +52,7 @@ pra isso, você cria um **commit** inicial.
    
 um **commit** é um documento que descreve uma alteração, um ponto na linha do tempo do projeto. ele é como um registro de uma alteração no projeto. essa alteração é salva com seu nome, seu email, data da alteração, suas alterações na pasta e uma descrição da alteração, que você mesmo escreve.   
    
-![Git commit](./assets/commit.png)   
+![Git commit](/blog/assets/commit.png)   
 então, na hora que você coloca os textos na pasta pela primeira vez, você cria um commit com a descrição "adiciona os textos que tenho agora", seleciona todos os arquivos e pronto, você tem um ponto na linha do tempo!   
    
 ### ok, mas agora quero usar o github pra salvar meus textos na nuvem? **comofas**   
@@ -63,7 +63,7 @@ na linguagem do povo de computação, **repositórios** são **locais nos quais 
    
 com o repositório criado no github, você só precisa configurar **onde** está seu repositório e **empurrar** as **alterações** pra lá. ou seja, você define a **origem** do repositório e faz um **push** dos **commits** pra lá.   
    
-![git push](./assets/git-push.png)   
+![git push](/blog/assets/git-push.png)   
    
 ### legal, agora tenho os meus textos salvos no github. que que eu faço com isso?   
    
@@ -73,7 +73,7 @@ agora, com os textos lá, você pode fazer várias coisas. vou enumerar algumas,
    
 digamos que você foi passar o fim de ano na casa dos seus pais e você quer alterar algum texto. você sabe que tem todos eles no seu computador, mas você (sua anta) esqueceu de trazê-lo. você até pode copiar os textos direto do site do github pro computador da sua mãe, mas isso significa que, se você quiser salvar a nova versão lá, você vai ter que criar **outro** repositório. relaxa, pra isso serve a clonagem de repositórios.   
    
-![git clone](./assets/git-clone.png)   
+![git clone](/blog/assets/git-clone.png)   
    
 **clonar** um repositório significa **baixar o projeto git inteiro, direto da origem, pro seu computador**. isso quer dizer que **todas as alterações**, de **toda a linha do tempo**, estão agora no seu computador. assim, ao você clonar um repositório, você pode simplesmente **criar novos commits** e **dar push** das novas alterações.   
    
@@ -83,7 +83,7 @@ isso permite que uma equipe possa fazer alterações no projeto, cada um em seu 
    
 ok, digamos que seu amigo tem um amorzinho também e quer escrever aquele poema lindo, mas não tem muita criatividade. você diz pra ele "cara, pode usar o amorzinho.txt, mas tem que dar uma alterada, senão vai pegar mal". você não quer, no entanto, que seu amiguinho use seu repositório, porque, né, é seu, com seus textos. o que seu amigo pode fazer pra ter a versão dele dos seus textos é criar o que chamamos de **fork**.   
    
-![git fork](./assets/git-fork.png)   
+![git fork](/blog/assets/git-fork.png)   
    
 um **fork** é um repositório criado a partir de outro. tudo nele é literalmente igual, desde o conteúdo dos arquivos até os commits salvos; a única diferença é que **pertence a um usuário diferente**.   
    
@@ -101,7 +101,7 @@ o cara é esperto: ele cria um **fork** do repositório, localiza o arquivo prob
    
 nesse pull request, constam os **commits** feitos, os **arquivos alterados** e uma descrição da correção. mas digamos que o cara esqueceu de alterar em outro lugar; você comenta no pull request dizendo que precisa alterar no outro lugar.   
    
-![git pull request](./assets/git-pull-request.png)   
+![git pull request](/blog/assets/git-pull-request.png)   
    
 esse detalhe deixa claro que **pull requests também são issues**. ambos são **discussões sobre um problema**. mas, claro, **issues não são necessariamente pull requests**, porque **pull requests têm como objetivo a correção de uma ou mais issues**.   
    
@@ -109,7 +109,7 @@ esse detalhe deixa claro que **pull requests também são issues**. ambos são *
    
 só mais uma, juro, tá acabando! digamos que você e seu amigo querem fazer diferentes versões de um mesmo poema num mesmo repositório. se você alterar e fizer um commit, seu amigo vai acabar fazendo outro commit por cima do seu, e isso não é legal. o que você pode fazer é **criar uma bifurcação no repositório** e dizer pro seu amigo que o seu branch é o seu e o dele é o dele. assim, enquanto você faz commits em uma bifurcação, seu amigo faz em outra, sem que uma interfira na outra. isso significa que, agora, seu projeto tem **dois branchs** (tecnicamente, três, porque tem o branch base, né).   
    
-![git branch](./assets/git-branch.png)   
+![git branch](/blog/assets/git-branch.png)   
    
 **branchs** são **bifurcações ou ramificações** dentro de um projeto git. eles servem para que tenhamos diferentes versões baseadas em um mesmo ponto do tempo. são usados para que a equipe se organize, para que um desenvolvedor faça a correção do link em um branch, enquanto outro desenvolvedor continua commitando em outro branch, sem interferirem um no processo do outro.   
    
