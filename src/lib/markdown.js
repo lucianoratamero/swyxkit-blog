@@ -13,6 +13,7 @@ import dayjs from "dayjs";
 import _ from "lodash";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import remarkToc from "remark-toc";
 
 let parser = unified()
   .use(parse)
@@ -20,6 +21,10 @@ let parser = unified()
   .use(frontmatter, ["yaml"]);
 
 let runner = unified()
+  .use(remarkToc, {
+    heading: "Table of Contents|Resumo|toc",
+    tight: true
+  })
   .use(remark2rehype)
   .use(highlight, { aliases: { "markdown": "ad-info" } })
   .use(rehypeSlug)

@@ -14,23 +14,12 @@ apesar de ambas as linguagens serem razoavelmente parecidas, achei interessante 
    
 ah, só um detalhe: aqui vamos supor que você está usando python 3, sim? bem, vamos lá!   
    
-* * *   
+## Resumo   
    
-pra quem quiser pular pra uma parte em específico, aqui vai:   
+```toc
+```
    
-*   [sintaxe](/blog/python-para-desenvolvedores-javascript#sintaxe)   
-    *   [declaração de variáveis](/blog/python-para-desenvolvedores-javascript#declaração-de-variáveis)   
-    *   [blocos](/blog/python-para-desenvolvedores-javascript#blocos)   
-    *   [controle de fluxo](/blog/python-para-desenvolvedores-javascript#controle-de-fluxo)   
-*   [tipos](/blog/python-para-desenvolvedores-javascript#tipos)   
-    *   [números](/blog/python-para-desenvolvedores-javascript#números)   
-    *   [listas](/blog/python-para-desenvolvedores-javascript#listas)   
-    *   [strings](/blog/python-para-desenvolvedores-javascript#strings)   
-    *   [dicionários](/blog/python-para-desenvolvedores-javascript#dicionários)   
-    *   [None](/blog/python-para-desenvolvedores-javascript#none)   
-    *   [funções](/blog/python-para-desenvolvedores-javascript#funções)   
-*   [módulos](/blog/python-para-desenvolvedores-javascript#módulos)   
-*   [programação orientada a objetos](/blog/python-para-desenvolvedores-javascript#programação-orientada-a-objetos)   
+   
    
 ## sintaxe   
    
