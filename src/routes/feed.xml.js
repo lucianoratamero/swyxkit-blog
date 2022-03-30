@@ -1,6 +1,12 @@
-import RSS from 'rss';
-import { SITE_TITLE, SITE_URL } from '$lib/siteConfig.js';
+import RSS from "rss";
+import { SITE_TITLE, SITE_URL } from "$lib/siteConfig.js";
 import { processAllWithContent } from "$lib/markdown";
+
+if(typeof String.prototype.replaceAll === "undefined") {
+	String.prototype.replaceAll = function(match, replace) {
+		return this.replace(new RegExp(match, 'g'), () => replace);
+	}
+}
 
 /** @type {import('@sveltejs/kit').RequestHandler} */
 export async function get() {
@@ -16,7 +22,7 @@ export async function get() {
 			title: post.metadata.title,
 			url: SITE_URL + `/blog/${post.metadata.slug}`,
 			date: post.metadata.date,
-			description: post.content
+			description: post.content.replaceAll("/blog", "https://ratamero.com/blog")
 		});
 	});
 
