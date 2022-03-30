@@ -15,6 +15,7 @@
   import { MY_TWITTER_HANDLE, SITE_URL } from "$lib/siteConfig";
   import dayjs from "dayjs";
   import { DEFAULT_OG_IMAGE } from "$lib/siteConfig.js";
+  import { page } from "$app/stores";
 
   /** @type {import("$lib/types.js").ContentItem} */
   export let metadata, content; // warning: if you try to destructure content here, make sure to make it reactive, or your page content will not update when your user navigates
@@ -23,8 +24,8 @@
 <svelte:head>
   <title>{metadata.title} - luciano@ratamero.com</title>
 
-  <link rel="canonical" href={SITE_URL} />
-  <meta property="og:url" content={SITE_URL} />
+  <link rel="canonical" href={$page.url} />
+  <meta property="og:url" content={$page.url} />
   <meta property="og:type" content="article" />
   <meta property="og:title" content={metadata.title} />
   <meta name="Description" content={metadata.description} />
