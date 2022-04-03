@@ -12,7 +12,7 @@
 </script>
 
 <script>
-  import { MY_TWITTER_HANDLE, SITE_URL } from "$lib/siteConfig";
+  import { MY_TWITTER_HANDLE } from "$lib/siteConfig";
   import dayjs from "dayjs";
   import { DEFAULT_OG_IMAGE } from "$lib/siteConfig.js";
   import { page } from "$app/stores";
