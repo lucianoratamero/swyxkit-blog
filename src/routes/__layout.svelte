@@ -6,6 +6,9 @@
   import "../tailwind.css";
   import "$lib/hljs-github-dark.css";
   import Nav from "$lib/components/Nav.svelte";
+  import { navigationIsDelayed } from "$lib/stores.js";
+  import { fade } from "svelte/transition";
+  import { Circle3 } from "svelte-loading-spinners";
 </script>
 
 <svelte:head>
@@ -16,6 +19,15 @@
     href="/feed.xml"
   />
 </svelte:head>
+
+{#if Boolean($navigationIsDelayed)}
+  <div class="absolute w-full h-full z-10" in:fade={{ duration: 150 }}>
+    <div class="absolute w-full h-full bg-white dark:bg-cyan-800 opacity-50 z-10"></div>
+    <div class="absolute w-full h-full flex justify-center items-center z-20">
+      <Circle3 />
+    </div>
+  </div>
+{/if}
 
 <div class="flex flex-col justify-center bg-gray-50 px-4 dark:bg-gray-900 sm:px-8">
   <Nav />
