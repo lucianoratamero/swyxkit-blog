@@ -45,8 +45,8 @@
 </script>
 
 <svelte:head>
-  <title>notes - luciano@ratamero.com</title>
-  <meta name="description" content="The place I put all my blog posts. Most are just notes to self, though." />
+  <title>Notes - luciano@ratamero.com</title>
+  <meta name="description" content="This is the place leave totally unrelated notes. They're mostly used on the blog posts, but may be linked from somewhere else." />
 </svelte:head>
 
 <svelte:window on:keyup={focusSearch} />

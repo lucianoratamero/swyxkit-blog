@@ -46,7 +46,7 @@
 </script>
 
 <svelte:head>
-  <title>blog - luciano@ratamero.com</title>
+  <title>Blog - luciano@ratamero.com</title>
   <meta name="description" content="The place I put all my blog posts. Most are just notes to self, though." />
 </svelte:head>
 
