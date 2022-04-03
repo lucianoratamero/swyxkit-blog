@@ -53,11 +53,11 @@ export function process(filename) {
   return { metadata, content };
 }
 
-export async function processAll() {
-  const files = fs.readdirSync("src/posts/");
+export async function processAll(suffix="") {
+  const files = fs.readdirSync(`src/posts/${suffix}`);
   const postsMetadata = files.map((file) => {
-    if (fs.lstatSync(`src/posts/${file}`).isFile()) {
-      return process(`src/posts/${file}`);
+    if (fs.lstatSync(`src/posts/${suffix}${file}`).isFile()) {
+      return process(`src/posts/${suffix}${file}`);
     }
   })
     .filter(post => Boolean(post))
