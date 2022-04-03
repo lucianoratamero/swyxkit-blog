@@ -1,6 +1,7 @@
 ---
 date: 2022-03-28
-description: ''
+description: A knowledge base (KB) is a technology used to store complex structured
+  and unstructured information used by a computer system.
 slug: knowledge-base
 title: Knowledge base
 updated_at: 2022-03-28
