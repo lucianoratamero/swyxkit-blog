@@ -37,7 +37,7 @@
   $: list = items
     .filter((item) => {
       if (search) {
-        return item.title.toLowerCase().includes(search.toLowerCase());
+        return item.title.toLowerCase().includes(search.toLowerCase()) || item.description.toLowerCase().includes(search.toLowerCase());
       }
       return true;
     })
@@ -57,15 +57,15 @@
   </h1>
   <p class="my-8 text-gray-600 dark:text-gray-400">
     This is the place leave totally unrelated notes. They're mostly used on the blog posts, but may be linked from somewhere else.
-    In total, I've written {items.length} notes here. Use the search below to filter by title.
+    In total, I've written {items.length} notes here. Use the search below to filter by title and description.
   </p>
   <div class="relative mb-4 w-full">
     <input
-      aria-label="Search articles by title"
+      aria-label="Search articles by title and description"
       type="text"
       bind:value={search}
       bind:this={inputEl}
-      placeholder="Hit / to search by title"
+      placeholder="Hit / to search by title and description"
       class="block w-full rounded-md border border-gray-200 bg-white px-4 py-2 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100"
     />
     <svg
