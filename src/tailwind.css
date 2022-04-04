@@ -57,6 +57,10 @@
         max-width: 100%;
         object-fit: cover;
     }
+
+    .utterances-frame {
+        outline: none;
+    }
 }
 /* bg-cyan-200 dark:hover:bg-cyan-800 */
 a {
