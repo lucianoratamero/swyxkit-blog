@@ -16,6 +16,7 @@
   import dayjs from "dayjs";
   import { DEFAULT_OG_IMAGE } from "$lib/siteConfig.js";
   import { page } from "$app/stores";
+  import Comments from "$lib/components/Comments.svelte";
 
   /** @type {import("$lib/types.js").ContentItem} */
   export let metadata, content; // warning: if you try to destructure content here, make sure to make it reactive, or your page content will not update when your user navigates
@@ -45,7 +46,7 @@
 
 <article
   id="skip"
-  class="mx-auto mb-16 flex w-full max-w-3xl flex-col items-start justify-center sm:px-8"
+  class="mx-auto mb-8 flex w-full max-w-3xl flex-col items-start justify-center sm:px-8"
 >
   <h1 class="mb-8 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl ">
     {metadata.title}
@@ -64,4 +65,6 @@
   <div class="prose mt-12 w-full max-w-none dark:prose-invert">
     {@html content}
   </div>
+
+  <Comments />
 </article>
