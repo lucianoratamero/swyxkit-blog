@@ -14,6 +14,7 @@ import _ from "lodash";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import remarkToc from "remark-toc";
+import highlightSvelte from "$lib/highlightSvelte.js";
 
 let parser = unified()
   .use(parse)
@@ -26,7 +27,7 @@ let runner = unified()
     tight: true
   })
   .use(remark2rehype)
-  .use(highlight, { aliases: { "markdown": "ad-info" } })
+  .use(highlight, { aliases: { "markdown": "ad-info" }, languages: { "svelte": highlightSvelte } })
   .use(rehypeSlug)
   .use(rehypeAutolinkHeadings, {
     behavior: "wrap"
@@ -53,7 +54,7 @@ export function process(filename) {
   return { metadata, content };
 }
 
-export async function processAll(suffix="") {
+export async function processAll(suffix = "") {
   const files = fs.readdirSync(`src/posts/${suffix}`);
   const postsMetadata = files.map((file) => {
     if (fs.lstatSync(`src/posts/${suffix}${file}`).isFile()) {
