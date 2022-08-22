@@ -27,7 +27,7 @@ I'll go topic by topic in the next sections.
    
 ## starting an Elixir project    
    
-to start a project, you need to install Elixir (it was one command), then run `mix new`. that's it. configuring the IDE was as straightforward as with other languages: install the plugin, set up which version I was using, and that was it as well, it all worked on the first try,   
+to start a project, you need to install Elixir (it was one command), then run `mix new`. that's it. configuring the IDE was as straightforward as with other languages: install the plugin, set up which version I was using, and that was it as well, it all worked on the first try.   
    
 writing new code was easy (I'll talk about the syntax next) and running it was a breeze. even the interactive shell (`iex`) was easy to use, and together with `mix` (which comes with the language), I was recompiling and executing code in minutes.   
    
