@@ -66,11 +66,12 @@ mkdir $BLOG_DIR
    
     
  Then, we run obsidianhtml passing the correct configs (the file above ☝️):   
- ```sh   
-obsidianhtml -i $OBSIDIANHTML_CONFIG_YML   
+```sh
+obsidianhtml -i $OBSIDIANHTML_CONFIG_YML
 ```
-
-We remove unnecessary files (the mandatory, useless and empty Index.md file), move the generated md files to the blog's folder, and clean the output folder, since we won't need it again:
+   
+   
+We remove unnecessary files (the mandatory, useless and empty Index.md file), move the generated md files to the blog's folder, and clean the output folder, since we won't need it again:   
 ```sh
 rm ./output/md/index.md
 mv ./output/md/* $BLOG_DIR

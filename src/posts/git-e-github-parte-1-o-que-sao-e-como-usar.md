@@ -55,7 +55,7 @@ um **commit** é um documento que descreve uma alteração, um ponto na linha do
 ![Git commit](/blog/assets/commit.png)   
 então, na hora que você coloca os textos na pasta pela primeira vez, você cria um commit com a descrição "adiciona os textos que tenho agora", seleciona todos os arquivos e pronto, você tem um ponto na linha do tempo!   
    
-### ok, mas agora quero usar o github pra salvar meus textos na nuvem? **comofas**   
+### ok, mas agora quero usar o github pra salvar meus textos na nuvem? comofas   
    
 pra isso, você cria uma conta no github e cria o que chamamos de um **repositório**.   
    
