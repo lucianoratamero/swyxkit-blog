@@ -37,7 +37,7 @@ the first thing to note here is the elephant in the room: Elixir is a language b
    
 so when I started playing with Elixir last week, I came prepared, clad in armor, ready to dig in and get my hands dirty.   
    
-but the confusion and the weird syntax never came. in fact, **I didn't remember how close to [Ruby](/not_created) the language feels**; at least at first. I felt like I was just playing around with functions, and that was **exactly** what I was doing - without fear, without any of the hardships I was expecting.   
+but the confusion and the weird syntax never came. in fact, **I didn't remember how close to Ruby the language feels**; at least at first. I felt like I was just playing around with functions, and that was **exactly** what I was doing - without fear, without any of the hardships I was expecting.   
    
 that left me open to appreciate some of the amazing features Elixir has - and I don't use the word amazing lightly.   
    
