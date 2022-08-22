@@ -40,6 +40,7 @@ export function process(filename) {
   if (tree.children.length > 0 && tree.children[0].type == "yaml") {
     metadata = yaml.load(tree.children[0].value);
     tree.children = tree.children.slice(1, tree.children.length);
+    metadata.date.setUTCHours(23,59,59,999);
     metadata.date = dayjs(metadata.date).format("YYYY-MM-DD");
   }
   let content = runner.stringify(runner.runSync(tree));
