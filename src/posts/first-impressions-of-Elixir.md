@@ -64,7 +64,7 @@ installing new dependencies with `hex` was pretty easy too. not as easy as on JS
    
 ## documentation, oh, beautiful documentation    
    
-not only Elixir's documentation is plentiful, but it's also easily searchable and literally built into the language. it was really easy to find what I needed with a could of web searches, and, together with the IDE's autocomplete, it was a bit rare to really **need** to search for it.   
+not only Elixir's documentation is plentiful, but it's also easily searchable and literally built into the language. it was really easy to find what I needed with a couple of web searches, and, together with the IDE's autocomplete, it was a bit rare to really **need** to search for it.   
    
 if, for example, you want to understand how the `Enum` module works, you just need to go into the interactive shell by running `iex`, then type `h Enum`. that gives you all you need to know about the module right from the command line. the same goes for module functions. for example, `h Enum.split` returns you this:   
    

@@ -1,4 +1,5 @@
 // @ts-disable
+/* eslint-disable */
 import fs from "fs";
 import { readSync } from "to-vfile";
 import unified from "unified";
