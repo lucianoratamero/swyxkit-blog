@@ -1,3 +1,5 @@
+export const prerender = true;
+
 import RSS from 'rss';
 import { SITE_TITLE, SITE_URL } from '$lib/siteConfig.js';
 import { processAllWithContent } from '$lib/markdown';
