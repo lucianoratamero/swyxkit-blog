@@ -1,4 +1,6 @@
-export function get() {
+import { json } from '@sveltejs/kit';
+
+export function GET() {
 	const body = JSON.stringify({
 		'subject': 'acct:lucianoratamero@bolha.us',
 		'aliases': ['https://bolha.us/@lucianoratamero', 'https://bolha.us/users/lucianoratamero'],
@@ -17,10 +19,9 @@ export function get() {
 		]
 	});
 
-	return {
+	return json(body, {
 		headers: {
 			'Content-Type': 'application/json'
-		},
-		body
-	};
+		}
+	});
 }

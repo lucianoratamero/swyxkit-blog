@@ -1,4 +1,6 @@
-export function get() {
+import { json } from '@sveltejs/kit';
+
+export function GET() {
 	const body = JSON.stringify({
 			'links': [{
 				'rel': 'http://nodeinfo.diaspora.software/ns/schema/2.0',
@@ -8,10 +10,9 @@ export function get() {
 		}
 	);
 
-	return {
+	return json(body, {
 		headers: {
 			'Content-Type': 'application/json'
-		},
-		body
-	};
+		}
+	});
 }

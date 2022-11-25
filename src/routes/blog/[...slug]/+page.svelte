@@ -1,16 +1,3 @@
-<script context="module">
-  export const prerender = true; // you can uncomment to prerender as an optimization
-  export const hydrate = true;
-
-  export async function load({ params, fetch }) {
-    const slug = params.slug;
-    const { metadata, content } = await fetch(`/blog/${slug}.json`).then(r => r.json());
-    return {
-      props: { metadata, content, slug }
-    };
-  }
-</script>
-
 <script>
   import { MY_TWITTER_HANDLE } from "$lib/siteConfig";
   import dayjs from "dayjs";
@@ -19,7 +6,8 @@
   import Comments from "$lib/components/Comments.svelte";
 
   /** @type {import("$lib/types.js").ContentItem} */
-  export let metadata, content; // warning: if you try to destructure content here, make sure to make it reactive, or your page content will not update when your user navigates
+  export let data;
+  let {metadata, content} = data; // warning: if you try to destructure content here, make sure to make it reactive, or your page content will not update when your user navigates
 </script>
 
 <svelte:head>

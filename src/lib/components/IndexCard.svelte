@@ -7,7 +7,7 @@
 </script>
 
 <a
-	sveltekit:prefetch
+	data-sveltekit-prefetch
 	class="w-full text-gray-900 hover:text-cyan-600 dark:text-gray-100 dark:hover:text-cyan-100 hover:no-underline"
 	{href}
 	><div class="mt-4 mb-12 w-full">

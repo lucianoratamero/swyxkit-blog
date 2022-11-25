@@ -1,31 +1,9 @@
-<script context="module">
-  export const prerender = true; // turned off so it refreshes quickly
-  export async function load({ fetch }) {
-    const res = await fetch(`/api/listContent.json`);
-    // alternate strategy https://www.davidwparker.com/posts/how-to-make-an-rss-feed-in-sveltekit
-    // Object.entries(import.meta.glob('./*.md')).map(async ([path, page]) => {
-    if (res.status > 400) {
-      return {
-        status: res.status,
-        error: await res.text()
-      };
-    }
-
-    /** @type {import("$lib/types").ContentItem[]} */
-    const items = await res.json();
-    return {
-      props: { items },
-      maxage: 60 // 1 minute
-    };
-  }
-</script>
-
 <script>
   import IndexCard from "$lib/components/IndexCard.svelte";
   import dayjs from "dayjs";
 
-  export let list;
-  export let items;
+  export let data;
+  let { items } = data;
 
   let inputEl;
 
