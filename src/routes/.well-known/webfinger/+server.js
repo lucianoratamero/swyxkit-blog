@@ -1,7 +1,7 @@
 import { json } from '@sveltejs/kit';
 
 export function GET() {
-	const body = JSON.stringify({
+	const body = {
 		'subject': 'acct:lucianoratamero@bolha.us',
 		'aliases': ['https://bolha.us/@lucianoratamero', 'https://bolha.us/users/lucianoratamero'],
 		'links': [{
@@ -17,7 +17,7 @@ export function GET() {
 			'template': 'https://bolha.us/authorize_interaction?uri={uri}'
 		}
 		]
-	});
+	};
 
 	return json(body, {
 		headers: {
