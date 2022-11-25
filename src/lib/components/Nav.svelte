@@ -43,6 +43,9 @@
     <li>
       <NavLink href="/about">About me</NavLink>
     </li>
+    <li>
+      <NavLink href="/mastodon-feed">@mastodon</NavLink>
+    </li>
   </ul>
   <div class="flex items-center space-x-4">
     <!-- RSS -->
