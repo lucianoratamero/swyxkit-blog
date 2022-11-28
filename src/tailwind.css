@@ -61,6 +61,11 @@
     .utterances-frame {
         outline: none;
     }
+
+    iframe, embed {
+        width: 100%;
+        @apply border-2 border-amber-400 dark:border-amber-200 rounded;
+    }
 }
 /* bg-cyan-200 dark:hover:bg-cyan-800 */
 a {
