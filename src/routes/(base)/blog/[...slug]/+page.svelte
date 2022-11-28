@@ -1,17 +1,17 @@
 <script>
-  import { MY_TWITTER_HANDLE } from "$lib/siteConfig";
+  import { MY_TWITTER_HANDLE } from "$lib/siteConfig.js";
   import dayjs from "dayjs";
-  import { DEFAULT_OG_IMAGE } from "$lib/siteConfig.js";
+  import { DEFAULT_OG_IMAGE } from "$lib/siteConfig";
   import { page } from "$app/stores";
   import Comments from "$lib/components/Comments.svelte";
 
-  /** @type {import("$lib/types.js").ContentItem} */
+  /** @type {import("$lib/types.d.ts").ContentItem} */
   export let data;
   let {metadata, content} = data; // warning: if you try to destructure content here, make sure to make it reactive, or your page content will not update when your user navigates
 </script>
 
 <svelte:head>
-  <title>{metadata.title} - note - luciano@ratamero.com</title>
+  <title>{metadata.title} - luciano@ratamero.com</title>
 
   <link rel="canonical" href={$page.url} />
   <meta property="og:url" content={$page.url} />

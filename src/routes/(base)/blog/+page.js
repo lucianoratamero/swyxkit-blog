@@ -9,7 +9,7 @@ export async function load({ fetch }) {
 		throw error(res.status, await res.text());
 	}
 
-	/** @type {import('$lib/types').ContentItem[]} */
+	/** @type {import('$lib/types.js').ContentItem[]} */
 	const items = await res.json();
 	return {
 		items
