@@ -1,7 +1,7 @@
 ---
 date: 2022-04-03
-description: SvelteKit is a fullstack web framework based on Svelte. And I love it
-  so much <3
+description: "SvelteKit is a fullstack web framework based on Svelte. And I love it
+  so much \U0001F496"
 slug: SvelteKit
 title: SvelteKit
 updated_at: 2022-04-03
@@ -9,7 +9,7 @@ updated_at: 2022-04-03
    
 ![SvelteKit's logo](../assets/sveltekit.png)   
    
-[SvelteKit](https://kit.svelte.dev/) is a fullstack web framework based on [Svelte](https://svelte.dev/). And I love it so much <3   
+[SvelteKit](https://kit.svelte.dev/) is a fullstack web framework based on [Svelte](https://svelte.dev/). And I love it so much 💖   
    
 It's no secret that I've been in love with Svelte as soon as I started playing with it in 2019, when they released the v3. Svelte is really, **really** easy to use and configure, and has good solutions for most of the things I hate about React.   
    
