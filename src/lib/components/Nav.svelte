@@ -41,7 +41,7 @@
       <NavLink href="/blog">Blog</NavLink>
     </li>
     <li>
-      <NavLink href="/about">About me</NavLink>
+      <NavLink href="/about">About</NavLink>
     </li>
     <li>
       <NavLink href="/mastodon-feed">@mastodon</NavLink>
