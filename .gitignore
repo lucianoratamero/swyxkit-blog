@@ -7,3 +7,4 @@ node_modules
 /static/tailwind.css
 /src/lib/sampledata.json
 /.vercel_build_output
+/.vercel
