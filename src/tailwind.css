@@ -66,6 +66,13 @@
         width: 100%;
         @apply border-2 border-amber-400 dark:border-amber-200 rounded;
     }
+
+    img + a {
+        text-align: center;
+        display: block;
+        margin-top: 1rem;
+        font-style: italic;
+    }
 }
 /* bg-cyan-200 dark:hover:bg-cyan-800 */
 a {
