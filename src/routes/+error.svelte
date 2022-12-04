@@ -28,7 +28,7 @@
 		<p class='font-mono'>{message}</p>
 	{/if}
 	{#if dev && $page.error.stack}
-		<pre class='mono overflow-scroll bg-gray-800 p-8'>{$page.error.stack}</pre>
+		<pre class='mono overflow-scroll bg-zinc-800 p-8'>{$page.error.stack}</pre>
 	{/if}
 </section>
 

@@ -31,7 +31,7 @@
 
 <BaseLayout>
 	<div
-		class='mx-auto flex max-w-3xl flex-col items-start justify-center border-gray-200 px-4 pb-16 dark:border-gray-700 sm:px-8'
+		class='mx-auto flex max-w-3xl flex-col items-start justify-center border-zinc-200 px-4 pb-16 dark:border-zinc-700 sm:px-8'
 	>
 		<div class='flex flex-col-reverse items-start sm:flex-row mb-8'>
 			<div class='flex flex-col pr-8'>
@@ -45,7 +45,7 @@
 				</span>
 					!
 				</h1>
-				<h2 class='mb-4 text-gray-700 dark:text-gray-200'>
+				<h2 class='mb-4 text-zinc-700 dark:text-zinc-200'>
 					Welcome to my site! What you'll see here are some of my notes, opinions and findings about technology,
 					frontend
 					development and... mostly anything.
@@ -66,7 +66,7 @@
 				{/each}
 			</div>
 			<a
-				class='mt-8 flex h-6 rounded-lg leading-7 text-gray-600 transition-all dark:text-gray-400 dark:hover:text-gray-200'
+				class='mt-8 flex h-6 rounded-lg leading-7 text-zinc-600 transition-all dark:text-zinc-400 dark:hover:text-zinc-200'
 				href='/blog'
 			>See latest posts
 				<svg

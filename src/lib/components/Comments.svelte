@@ -6,7 +6,7 @@
   <!--{#if !isOpen}-->
   <!--  <button-->
   <!--    on:click={() => isOpen = true}-->
-  <!--    class="w-1/2 block mx-auto rounded-lg p-1 text-gray-800 transition-all bg-cyan-200 dark:text-gray-200 dark:bg-cyan-800 sm:px-3 sm:py-2">-->
+  <!--    class="w-1/2 block mx-auto rounded-lg p-1 text-zinc-800 transition-all bg-cyan-200 dark:text-zinc-200 dark:bg-cyan-800 sm:px-3 sm:py-2">-->
   <!--    Load comments-->
   <!--  </button>-->
   <!--{:else}-->

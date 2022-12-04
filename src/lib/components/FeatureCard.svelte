@@ -10,15 +10,15 @@
 	{href}
 	data-sveltekit-prefetch
 >
-	<div class='flex h-full flex-col justify-between rounded-lg bg-white p-4 dark:bg-gray-900'>
+	<div class='flex h-full flex-col justify-between rounded-lg p-4 bg-gradient-to-br from-white to-zinc-100 dark:bg-gradient-to-br dark:from-zinc-800 dark:to-zinc-900'>
 		<div class='flex flex-col justify-between md:flex-row'>
 			<h4
-				class='mb-6 w-full text-lg font-medium tracking-tight text-gray-900 dark:text-gray-100 sm:mb-10 md:text-lg'
+				class='mb-6 w-full text-lg font-medium tracking-tight text-zinc-900 dark:text-zinc-100 sm:mb-10 md:text-lg'
 			>
 				{title}
 			</h4>
 		</div>
-		<div class='capsize flex items-center text-gray-800 dark:text-gray-200'>
+		<div class='capsize flex items-center text-zinc-800 dark:text-zinc-200'>
 			{stringData}
 		</div>
 	</div>

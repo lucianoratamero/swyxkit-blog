@@ -27,9 +27,9 @@
 </script>
 
 <nav
-	class='relative mx-auto flex w-full max-w-3xl items-center justify-between border-gray-200
-	bg-gray-50 bg-opacity-60 py-8 text-gray-900 dark:border-gray-700 dark:bg-gray-900
-	dark:text-gray-100 sm:pb-16 sm:px-7'
+	class='relative mx-auto flex w-full max-w-3xl items-center justify-between border-zinc-200
+	bg-opacity-60 py-8 text-zinc-900 dark:border-zinc-700
+	dark:text-zinc-100 sm:pb-16 sm:px-7'
 >
 	<a href='#skip' class='skip-nav'>Skip to content</a>
 	<MobileMenu />
@@ -43,14 +43,14 @@
 		<li>
 			<NavLink href='/about'>About</NavLink>
 		</li>
-		<li>
-			<NavLink href='/mastodon-feed'>@mastodon</NavLink>
-		</li>
+<!--		<li>-->
+<!--			<NavLink href='/mastodon-feed'>@mastodon</NavLink>-->
+<!--		</li>-->
 	</ul>
 	<div class='flex items-center space-x-4'>
 		<!-- RSS -->
 		<a
-			class='rounded-lg text-gray-700 hover:bg-cyan-200 dark:text-gray-200 dark:hover:bg-cyan-800'
+			class='rounded-lg text-zinc-700 hover:bg-cyan-200 dark:text-zinc-200 dark:hover:bg-cyan-800'
 			rel='external'
 			href='/feed.xml'
 			aria-label='RSS'
@@ -73,7 +73,7 @@
 		</a>
 		<!-- Github -->
 		<a
-			class='rounded-lg text-gray-700 hover:bg-cyan-200 dark:text-gray-200
+			class='rounded-lg text-zinc-700 hover:bg-cyan-200 dark:text-zinc-200
 			dark:hover:bg-cyan-800'
 			href={REPO_URL}
 			aria-label='GitHub source'
@@ -106,7 +106,7 @@
 					viewBox='0 0 24 24'
 					fill='none'
 					stroke='currentColor'
-					class='h-5 w-5 text-gray-800 dark:text-cyan-100'
+					class='h-5 w-5 text-zinc-800 dark:text-cyan-100'
 				>
 					<path
 						stroke-linecap='round'
@@ -122,7 +122,7 @@
 					viewBox='0 0 24 24'
 					fill='none'
 					stroke='currentColor'
-					class='w-5 h-5 text-gray-800 dark:text-gray-200'
+					class='w-5 h-5 text-zinc-800 dark:text-zinc-200'
 				>
 					<path
 						stroke-linecap='round'

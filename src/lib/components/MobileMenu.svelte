@@ -23,7 +23,7 @@
   >
     {#if !isOpen}
       <svg
-        class="absolute h-5 w-5 text-gray-900 dark:text-gray-100"
+        class="absolute h-5 w-5 text-zinc-900 dark:text-zinc-100"
         width="20"
         height="20"
         viewBox="0 0 20 20"
@@ -47,7 +47,7 @@
       >
     {:else}
       <svg
-        class="h-5 w-5 absolute text-gray-900 dark:text-gray-100"
+        class="h-5 w-5 absolute text-zinc-900 dark:text-zinc-100"
         viewBox="0 0 24 24"
         width="24"
         height="24"
@@ -66,11 +66,11 @@
   </button>
   {#if isOpen}
     <ul
-      class="menu absolute flex flex-col bg-gray-50 text-2xl  uppercase dark:bg-gray-900"
+      class="menu absolute flex flex-col bg-zinc-50 text-2xl  uppercase dark:bg-zinc-900"
       class:menuRendered={isMenuRendered}
     >
       <li
-        class="border-b border-gray-300 font-semibold text-gray-900 dark:border-gray-700 dark:text-gray-100"
+        class="border-b border-zinc-300 font-semibold text-zinc-900 dark:border-zinc-700 dark:text-zinc-100"
         style="transition-delay: 150ms;"
       >
         <a
@@ -81,7 +81,7 @@
         >
       </li>
       <li
-        class="border-b border-gray-300 font-semibold text-gray-900 dark:border-gray-700 dark:text-gray-100"
+        class="border-b border-zinc-300 font-semibold text-zinc-900 dark:border-zinc-700 dark:text-zinc-100"
         style="transition-delay: 250ms;"
       >
         <a
@@ -92,7 +92,7 @@
         >
       </li>
       <li
-        class="border-b border-gray-300 font-semibold text-gray-900 dark:border-gray-700 dark:text-gray-100"
+        class="border-b border-zinc-300 font-semibold text-zinc-900 dark:border-zinc-700 dark:text-zinc-100"
         style="transition-delay: 350ms;"
       >
         <a
@@ -149,7 +149,7 @@
     }
 
     .menuRendered li {
-        @apply w-full border-gray-200 dark:border-gray-600;
+        @apply w-full border-zinc-200 dark:border-zinc-600;
         transform: translateX(0);
         opacity: 1;
     }

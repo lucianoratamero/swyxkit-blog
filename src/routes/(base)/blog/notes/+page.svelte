@@ -36,7 +36,7 @@
 	<h1 class='mb-4 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl'>
 		Notes
 	</h1>
-	<p class='my-8 text-gray-600 dark:text-gray-400'>
+	<p class='my-8 text-zinc-600 dark:text-zinc-400'>
 		This is the place leave totally unrelated notes. They're mostly used on the blog posts, but may be linked from
 		somewhere else.
 		In total, I've written {items.length} notes here. Use the search below to filter by title and description.
@@ -48,10 +48,10 @@
 			bind:value={search}
 			bind:this={inputEl}
 			placeholder='Hit / to search by title and description'
-			class='block w-full rounded-md border border-gray-200 bg-white px-4 py-2 text-gray-900 focus:border-blue-500 focus:ring-blue-500 dark:border-gray-900 dark:bg-gray-800 dark:text-gray-100'
+			class='block w-full rounded-md border border-zinc-200 bg-white px-4 py-2 text-zinc-900 focus:border-blue-500 focus:ring-blue-500 dark:border-zinc-900 dark:bg-zinc-800 dark:text-zinc-100'
 		/>
 		<svg
-			class='absolute right-3 top-3 h-5 w-5 text-gray-400 dark:text-gray-300'
+			class='absolute right-3 top-3 h-5 w-5 text-zinc-400 dark:text-zinc-300'
 			xmlns='http://www.w3.org/2000/svg'
 			fill='none'
 			viewBox='0 0 24 24'
