@@ -1,20 +1,20 @@
 <svelte:head>
-  <title>About - luciano@ratamero.com</title>
+	<title>About - luciano@ratamero.com</title>
 </svelte:head>
 
 <script>
-  import eu3x from "$lib/img/eu-3x.jpg";
+	import eu3x from '$lib/img/eu-3x.jpg';
 
-  const birthday = new Date("1989-06-15");
-  const month_diff = Date.now() - birthday.getTime();
-  const age_dt = new Date(month_diff);
-  const year = age_dt.getUTCFullYear();
-  const age = Math.abs(year - 1970);
+	const birthday = new Date('1989-06-15');
+	const month_diff = Date.now() - birthday.getTime();
+	const age_dt = new Date(month_diff);
+	const year = age_dt.getUTCFullYear();
+	const age = Math.abs(year - 1970);
 </script>
 
 <h1 class='mb-8 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl'>About Luciano</h1>
 
-<img id="skip" class="rounded-lg block mx-auto" src={eu3x} alt="Luciano in a raccoon onesie." />
+<img id='skip' class='rounded-lg block mx-auto' src={eu3x} alt='Luciano in a raccoon onesie.' />
 
 Hi, my name is Luciano Ratamero (he/him), I'm {age} years old, and I currently live in Recife, Brazil. :]
 
@@ -38,7 +38,7 @@ Feel free to take a look around! I leave a lot of notes on things I'm interested
 - [lastfm](https://www.last.fm/user/lucianoratamero)
 
 <style>
-  img {
-    height: 25vh;
-  }
+    img {
+        height: 25vh;
+    }
 </style>

@@ -74,6 +74,7 @@
         font-style: italic;
     }
 }
+
 /* bg-cyan-200 dark:hover:bg-cyan-800 */
 a {
     @apply text-cyan-800 hover:text-cyan-700 hover:underline dark:text-cyan-400 dark:hover:text-cyan-200;

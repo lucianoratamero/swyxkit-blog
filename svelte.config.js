@@ -10,9 +10,7 @@ const mdsvexConfig = {
 	layout: {
 		_: './src/mdsvexlayout.svelte' // default mdsvex layout
 	},
-	remarkPlugins: [
-
-	],
+	remarkPlugins: [],
 	rehypePlugins: [
 		rehypeSlug,
 		[
