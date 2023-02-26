@@ -8,3 +8,4 @@ node_modules
 /src/lib/sampledata.json
 /.vercel_build_output
 /.vercel
+.vercel
