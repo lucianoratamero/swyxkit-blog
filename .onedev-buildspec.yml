@@ -1,0 +1,49 @@
+version: 20
+jobs:
+- name: build
+  steps:
+  - !CheckoutStep
+    name: checkout main
+    cloneCredential: !DefaultCredential {}
+    withLfs: false
+    withSubmodules: false
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !CommandStep
+    name: install and build
+    runInContainer: true
+    image: node:lts
+    interpreter: !DefaultInterpreter
+      commands:
+      - export CI=true
+      - npm install
+      - npm run build
+    useTTY: true
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  - !PublishArtifactStep
+    name: pass artifacts
+    sourcePath: .vercel/output/static/
+    artifacts: '**/*'
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  triggers:
+  - !PullRequestMergeTrigger
+    branches: main
+    projects: ratamero.com
+  retryCondition: never
+  maxRetries: 3
+  retryDelay: 30
+  timeout: 3600
+- name: publish
+  steps:
+  - !PublishSiteStep
+    projectPath: ratamero.com
+    name: publish site
+    artifacts: '**/*'
+    condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
+  jobDependencies:
+  - jobName: build
+    requireSuccessful: true
+    artifacts: '**/*'
+  retryCondition: never
+  maxRetries: 3
+  retryDelay: 30
+  timeout: 3600
