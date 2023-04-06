@@ -25,7 +25,7 @@ jobs:
     artifacts: '**/*'
     condition: ALL_PREVIOUS_STEPS_WERE_SUCCESSFUL
   triggers:
-  - !PullRequestMergeTrigger
+  - !BranchUpdateTrigger
     branches: main
     projects: ratamero.com
   retryCondition: never
