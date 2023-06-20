@@ -16,13 +16,13 @@
 
 <img id='skip' class='rounded-lg block mx-auto' src={eu3x} alt='Luciano in a raccoon onesie.' />
 
-Hi, my name is Luciano Ratamero (he/him), I'm {age} years old, and I currently live in Recife, Brazil. :]
+Hi, my name is Luciano Ratamero (he/him), I'm {age} years old, and I currently live in Nova Friburgo, Brazil. :]
 
 I love reading, writing, playing videogames, listening to music, and watching streams on Twitch.
 
 I'm a JavaScript and Python web developer, working mainly on the frontend. I've worked with a lot of tehcnologies over the years, including React, Django and Svelte.
 
-Currently, I'm developing apps for [Lincoln Loop](https://lincolnloop.com/) and training devs at [Labcodes](https://labcodes.com.br/), so their awesome team becomes even better at frontend. I also sometimes make some videos on [YouTube](https://www.youtube.com/channel/UCYBAN_yOwqKG6tlaPHvROqg).
+Currently, I'm developing apps for [Lincoln Loop](https://lincolnloop.com/). I also sometimes make some videos on [YouTube](https://www.youtube.com/channel/UCYBAN_yOwqKG6tlaPHvROqg).
 
 Feel free to take a look around! I leave a lot of notes on things I'm interested about, so I hope they're of use to you.
 
