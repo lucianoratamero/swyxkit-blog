@@ -2,7 +2,7 @@
 /* eslint-disable */
 import fs from 'fs';
 import { readSync } from 'to-vfile';
-import unified from 'unified';
+import { unified } from 'unified';
 import parse from 'remark-parse';
 import gfm from 'remark-gfm';
 import remark2rehype from 'remark-rehype';
@@ -17,10 +17,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import remarkToc from 'remark-toc';
 import highlightSvelte from '$lib/highlightSvelte.js';
 
-let parser = unified()
-	.use(parse)
-	.use(gfm)
-	.use(frontmatter, ['yaml']);
+let parser = unified().use(parse).use(gfm).use(frontmatter, ['yaml']);
 
 let runner = unified()
 	.use(remarkToc, {
@@ -28,7 +25,7 @@ let runner = unified()
 		tight: true
 	})
 	.use(remark2rehype)
-	.use(highlight, { aliases: { 'markdown': 'ad-info' }, languages: { 'svelte': highlightSvelte } })
+	.use(highlight, { aliases: { markdown: 'ad-info' }, languages: { svelte: highlightSvelte } })
 	.use(rehypeSlug)
 	.use(rehypeAutolinkHeadings, {
 		behavior: 'wrap'
@@ -58,13 +55,14 @@ export function process(filename) {
 
 export async function processAll(suffix = '') {
 	const files = fs.readdirSync(`src/posts/${suffix}`);
-	const postsMetadata = files.map((file) => {
-		if (fs.lstatSync(`src/posts/${suffix}${file}`).isFile()) {
-			return process(`src/posts/${suffix}${file}`);
-		}
-	})
-		.filter(post => Boolean(post))
-		.map(post => {
+	const postsMetadata = files
+		.map((file) => {
+			if (fs.lstatSync(`src/posts/${suffix}${file}`).isFile()) {
+				return process(`src/posts/${suffix}${file}`);
+			}
+		})
+		.filter((post) => Boolean(post))
+		.map((post) => {
 			return post && post.metadata;
 		});
 	return _.sortBy(postsMetadata, ['date']).reverse();
@@ -72,11 +70,13 @@ export async function processAll(suffix = '') {
 
 export async function processAllWithContent() {
 	const files = fs.readdirSync('src/posts/');
-	const posts = files.map((file) => {
-		if (fs.lstatSync(`src/posts/${file}`).isFile()) {
-			return process(`src/posts/${file}`);
-		}
-	}).filter(post => Boolean(post));
+	const posts = files
+		.map((file) => {
+			if (fs.lstatSync(`src/posts/${file}`).isFile()) {
+				return process(`src/posts/${file}`);
+			}
+		})
+		.filter((post) => Boolean(post));
 
 	const dateComparator = (post) => _.get(post, 'metadata.date');
 	return _.orderBy(posts, dateComparator, ['desc']);
