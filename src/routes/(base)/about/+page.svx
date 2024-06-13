@@ -20,7 +20,7 @@ Hi, my name is Luciano Ratamero (he/him), I'm {age} years old, and I currently l
 
 I love reading, writing, playing videogames, listening to music, and watching streams on Twitch.
 
-I'm a JavaScript and Python web developer, working mainly on the frontend. I've worked with a lot of tehcnologies over the years, including React, Django and Svelte.
+I'm a JavaScript and Python web developer, working mainly on the frontend. I've worked with a lot of tehcnologies over the years, including React, Vue, Django and Svelte.
 
 Currently, I'm developing apps for [Lincoln Loop](https://lincolnloop.com/). I also sometimes make some videos on [YouTube](https://www.youtube.com/channel/UCYBAN_yOwqKG6tlaPHvROqg).
 
