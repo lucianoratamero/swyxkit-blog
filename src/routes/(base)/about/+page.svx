@@ -14,7 +14,7 @@
 
 <h1 class='mb-8 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl'>About Luciano</h1>
 
-<img id='skip' class='rounded-lg block mx-auto' src={eu3x} alt='Luciano in a raccoon onesie.' />
+<img id='skip' class='rounded-lg block mx-auto aspect-square' src={eu3x} alt='Luciano in a raccoon onesie.' />
 
 Hi, my name is Luciano Ratamero (he/him), I'm {age} years old, and I currently live in Nova Friburgo, Brazil. :]
 
