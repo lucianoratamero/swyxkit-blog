@@ -1,9 +1,23 @@
 <script>
-	export let href = '#';
 
-	export let title = 'Untitled post';
-	/** @type {string} */
-	export let stringData = 'no date';
+	
+	/**
+	 * @typedef {Object} Props
+	 * @property {string} [href]
+	 * @property {string} [title]
+	 * @property {string} [stringData]
+	 * @property {import('svelte').Snippet} [children]
+	 */
+
+	/** @type {Props} */
+	let {
+		href = '#',
+		title = 'Untitled post',
+		stringData = 'no date',
+		children
+	} = $props();
+
+	const children_render = $derived(children);
 </script>
 
 <a
@@ -20,7 +34,7 @@
 			</div>
 		</div>
 		<p class="text-zinc-600 dark:text-zinc-400">
-			<slot />
+			{@render children_render?.()}
 		</p>
 	</div></a
 >

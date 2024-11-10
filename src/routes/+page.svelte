@@ -1,4 +1,6 @@
-<script>
+<script lang="ts">
+	import BaseLayout from '$lib/BaseLayout.svelte';
+	import FeatureCard from '$lib/components/FeatureCard.svelte';
 	import {
 		DEFAULT_OG_IMAGE,
 		MY_TWITTER_HANDLE,
@@ -6,10 +8,8 @@
 		SITE_TITLE,
 		SITE_URL
 	} from '$lib/siteConfig';
-	import FeatureCard from '$lib/components/FeatureCard.svelte';
-	import BaseLayout from '$lib/BaseLayout.svelte';
 
-	export let data;
+	let { data } = $props();
 	let { items } = data;
 </script>
 

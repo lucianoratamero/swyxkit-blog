@@ -1,7 +1,9 @@
 <script>
-  let isOpen = false;
-  let isMenuRendered;
-  $: {
+  import { run } from 'svelte/legacy';
+
+  let isOpen = $state(false);
+  let isMenuRendered = $state();
+  run(() => {
     if (isOpen) {
       setTimeout(() => {
         isMenuRendered = true;
@@ -11,7 +13,7 @@
         isMenuRendered = false;
       }, 300);
     }
-  }
+  });
 </script>
 
 <div class="ml-[-0.60rem] md:hidden">
@@ -19,7 +21,7 @@
     class="burger visible"
     aria-label="Toggle menu"
     type="button"
-    on:click={() => (isOpen = !isOpen)}
+    onclick={() => (isOpen = !isOpen)}
   >
     {#if !isOpen}
       <svg
@@ -76,7 +78,7 @@
         <a
           class="flex w-auto pb-4"
           data-sveltekit-prefetch
-          on:click={() => setTimeout(() => (isOpen = false), 300)}
+          onclick={() => setTimeout(() => (isOpen = false), 300)}
           href="/">Home</a
         >
       </li>
@@ -87,7 +89,7 @@
         <a
           class="flex w-auto pb-4"
           data-sveltekit-prefetch
-          on:click={() => setTimeout(() => (isOpen = false), 300)}
+          onclick={() => setTimeout(() => (isOpen = false), 300)}
           href="/blog">Blog</a
         >
       </li>
@@ -98,7 +100,7 @@
         <a
           class="flex w-auto pb-4"
           data-sveltekit-prefetch
-          on:click={() => setTimeout(() => (isOpen = false), 300)}
+          onclick={() => setTimeout(() => (isOpen = false), 300)}
           href="/about">About me</a
         >
       </li>

@@ -1,12 +1,19 @@
-<script context='module'>
+<script module>
 	import { MY_TWITTER_HANDLE, MY_YOUTUBE, REPO_URL, SITE_TITLE } from '$lib/siteConfig.js';
 </script>
 
-<script>
+<script lang="ts">
 	import Nav from '$lib/components/Nav.svelte';
 	import { navigationIsDelayed } from '$lib/stores';
 	import { fade } from 'svelte/transition';
 	import { Circle3 } from 'svelte-loading-spinners';
+	interface Props {
+		children?: import('svelte').Snippet;
+	}
+
+	let { children }: Props = $props();
+
+	const children_render = $derived(children);
 </script>
 
 <svelte:head>
@@ -31,7 +38,7 @@
 	<Nav />
 </div>
 <main class='flex flex-col justify-center px-4 sm:px-8'>
-	<slot />
+	{@render children_render?.()}
 </main>
 
 <footer class='mx-auto mb-8 flex w-full max-w-3xl flex-col items-start justify-center'>

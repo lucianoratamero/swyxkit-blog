@@ -1,6 +1,9 @@
 export type ContentItem = {
 	type: 'blog';
 	content: string;
+	metadata: {
+		[key: string]: string;
+	};
 	frontmatter: {
 		[key: string]: string;
 	};
@@ -12,7 +15,7 @@ export type ContentItem = {
 	image: string;
 	canonical: string;
 	slug: string;
-	date: Date;
+	date: string;
 	ghMetadata: GHMetadata;
 };
 

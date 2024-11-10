@@ -1,26 +1,26 @@
-<script>
+<script lang="ts">
 	import IndexCard from '$lib/components/IndexCard.svelte';
 	import dayjs from 'dayjs';
 
-	export let data;
+	let { data } = $props();
 	let { items } = data;
 
-	let inputEl;
+	let inputEl: HTMLInputElement = $state();
 
 	function focusSearch(e) {
 		if (e.key === '/' && inputEl) inputEl.select();
 	}
 
-	let isTruncated = items.length > 20;
-	let search;
-	$: list = items
+	let isTruncated = $state(items.length > 20);
+	let search: string = $state();
+	let list = $derived(items
 		.filter((item) => {
 			if (search) {
 				return item.title.toLowerCase().includes(search.toLowerCase()) || item.description.toLowerCase().includes(search.toLowerCase());
 			}
 			return true;
 		})
-		.slice(0, isTruncated ? 2 : items.length);
+		.slice(0, isTruncated ? 2 : items.length));
 </script>
 
 <svelte:head>
@@ -28,7 +28,7 @@
 	<meta name='description' content='The place I put all my blog posts. Most are just notes to self, though.' />
 </svelte:head>
 
-<svelte:window on:keyup={focusSearch} />
+<svelte:window onkeyup={focusSearch} />
 
 <section class='mx-auto mb-16 flex max-w-3xl flex-col items-start justify-center px-4 sm:px-8'>
 	<h1 class='mb-4 text-3xl font-bold tracking-tight text-black dark:text-white md:text-5xl'>
@@ -89,7 +89,7 @@
 		{#if isTruncated}
 			<div class='flex justify-center'>
 				<button
-					on:click={() => (isTruncated = false)}
+					onclick={() => (isTruncated = false)}
 					class='inline-block rounded bg-blue-100 p-4 text-lg font-bold tracking-tight text-black hover:text-cyan-900 dark:bg-blue-900 dark:text-white hover:dark:text-cyan-200 md:text-2xl'
 				>
 					Load More Posts...
@@ -101,7 +101,7 @@
 			No posts found for
 			<code>{search}</code>.
 		</div>
-		<button class='p-2 bg-slate-500' on:click={() => (search = '')}>Clear your search</button>
+		<button class='p-2 bg-slate-500' onclick={() => (search = '')}>Clear your search</button>
 	{:else}
 		<div class='prose dark:prose-invert'>No blogposts found!</div>
 	{/if}

@@ -1,8 +1,14 @@
 <script>
-	export let title = 'Untitled post';
-	export let href = '#';
-	/** @type {string} */
-	export let stringData;
+	
+	/**
+	 * @typedef {Object} Props
+	 * @property {string} [title]
+	 * @property {string} [href]
+	 * @property {string} stringData
+	 */
+
+	/** @type {Props} */
+	let { title = 'Untitled post', href = '#', stringData } = $props();
 </script>
 
 <a

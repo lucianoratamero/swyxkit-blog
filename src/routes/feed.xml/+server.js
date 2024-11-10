@@ -1,10 +1,12 @@
 export const prerender = true;
 
-import RSS from 'rss';
-import { SITE_TITLE, SITE_URL } from '$lib/siteConfig.js';
 import { processAllWithContent } from '$lib/markdown';
+import { SITE_TITLE, SITE_URL } from '$lib/siteConfig.js';
+import RSS from 'rss';
 
+// @ts-expect-error
 if (typeof String.prototype.replaceAll === 'undefined') {
+	// @ts-expect-error
 	String.prototype.replaceAll = function (match, replace) {
 		return this.replace(new RegExp(match, 'g'), () => replace);
 	};

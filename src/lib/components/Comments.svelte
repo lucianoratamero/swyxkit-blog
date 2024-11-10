@@ -1,5 +1,7 @@
 <script>
-  let isOpen = false;
+// @ts-nocheck
+
+let isOpen = false;
 </script>
 
 <div class="comments-section w-full mt-8">
