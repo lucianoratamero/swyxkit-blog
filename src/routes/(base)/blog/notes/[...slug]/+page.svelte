@@ -48,7 +48,7 @@
 		class="bg mt-2 flex w-full justify-between sm:flex-col sm:items-start md:flex-row md:items-center"
 	>
 		<p class="flex items-center text-sm text-zinc-700 dark:text-zinc-300">Luciano Ratamero</p>
-		<p class="min-w-32 flex items-center text-sm text-zinc-600 dark:text-zinc-400 md:mt-0">
+		<p class='min-w-32 text-right text-sm text-zinc-600 dark:text-zinc-400 md:mt-0'>
 			{dayjs(metadata.date).toISOString().slice(0, 10)}
 		</p>
 	</div>
