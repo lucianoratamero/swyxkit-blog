@@ -56,9 +56,9 @@
 				class='text-zinc-500 transition hover:text-zinc-300'
 				target='_blank'
 				rel='noopener noreferrer'
-				href={'https://twitter.com/intent/follow?screen_name=' + MY_TWITTER_HANDLE}
+				href="https://bsky.app/profile/lucianoratamero.bsky.social"
 			>
-				Twitter
+				Bluesky
 			</a>
 			<a
 				class='text-zinc-500 transition hover:text-zinc-300'
