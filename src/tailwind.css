@@ -3,9 +3,40 @@
 @tailwind utilities;
 
 @layer components {
+	html.geocities {
+		font-family: 'Comic Sans MS', cursive !important;
+
+		body {
+			background-image: url('/sparkle.gif') !important;
+		}
+
+		main, nav, footer {
+			background-color: #0c0c0c;
+			border: 2px solid #fff !important;
+			border-radius: 1rem;
+			padding: 4rem 2rem;
+		}
+
+		nav {
+			padding: 1rem;
+		}
+
+		footer {
+			margin-top: 1rem;
+
+			hr {
+				display: none;
+			}
+		}
+
+		h1, h2 {
+			color: #ff0 !important;
+		}
+	}
+
+	/* https://ishadeed.com/article/defensive-css */
 	body {
 		--brand-accent: #0fa1b4;
-		/* https://ishadeed.com/article/defensive-css */
 		overflow-wrap: break-word;
 		overflow-y: auto;
 		scrollbar-gutter: stable;

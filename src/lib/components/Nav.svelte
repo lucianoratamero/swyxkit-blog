@@ -1,8 +1,13 @@
-<script>
+<script lang="ts">
 	import { REPO_URL } from '$lib/siteConfig.js';
+	import Button from './Button.svelte';
 	import MobileMenu from './MobileMenu.svelte';
 	import NavLink from './NavLink.svelte';
 
+	let showGeocitiesWarningDialog = $state(false);
+	let timer = $state(null);
+
+	let isGeocities = $state(false);
 	let isDark = $state(false);
 	if (typeof localStorage !== 'undefined') {
 		if (
@@ -11,6 +16,8 @@
 		) {
 			isDark = true;
 		}
+
+		isGeocities = localStorage.geocities === 'true';
 	}
 
 	function toggleDarkMode() {
@@ -24,12 +31,48 @@
 			isDark = true;
 		}
 	}
+
+	function handleGeocitiesWarningDialog(e: MouseEvent) {
+		e.preventDefault();
+		showGeocitiesWarningDialog = !showGeocitiesWarningDialog;
+	}
+
+	function handleThemeMouseDown(e: MouseEvent) {
+		timer = setTimeout(() => handleGeocitiesWarningDialog(e), 1000);
+	}
+
+	function handleThemeMouseUp() {
+		clearTimeout(timer);
+		if (!showGeocitiesWarningDialog) {
+			toggleDarkMode();
+		}
+	}
+
+	function setGeocities(value) {
+		showGeocitiesWarningDialog = false;
+		isGeocities = value;
+
+		if (typeof localStorage !== 'undefined') {
+			localStorage.geocities = value;
+		}
+	}
+
+	$effect(() => {
+		if (isGeocities) {
+			document.documentElement.classList.add('geocities');
+			document.documentElement.classList.add('dark');
+			localStorage.theme = 'dark';
+			isDark = true;
+		} else {
+			document.documentElement.classList.remove('geocities');
+		}
+	});
 </script>
 
 <nav
 	class="relative mx-auto flex w-full max-w-3xl items-center justify-between border-zinc-200
-	bg-opacity-60 py-8 text-zinc-900 dark:border-zinc-700
-	dark:text-zinc-100 sm:pb-16 sm:px-7"
+	bg-opacity-60 pt-8 mb-8 text-zinc-900 dark:border-zinc-700
+	dark:text-zinc-100 sm:mb-16 sm:px-7"
 >
 	<a href="#skip" class="skip-nav">Skip to content</a>
 	<MobileMenu />
@@ -98,7 +141,8 @@
 			aria-label="Toggle Dark Mode"
 			class="ml-1 flex h-9 w-9 items-center justify-center rounded-lg bg-cyan-400 ring-cyan-400
 			transition-all hover:ring-2 dark:bg-cyan-800"
-			onclick={toggleDarkMode}
+			onmousedown={handleThemeMouseDown}
+			onmouseup={handleThemeMouseUp}
 		>
 			{#if isDark}
 				<svg
@@ -133,6 +177,21 @@
 				</svg>
 			{/if}
 		</button>
+
+		{#if showGeocitiesWarningDialog}
+			<div
+				class="absolute top-full min-w-56 right-0 z-50 text-sm p-2 border rounded bg-white dark:bg-zinc-800 border-purple-400 flex flex-col gap-2"
+			>
+				<p>Psst, this will enable the geocities theme!</p>
+				<p>It's not accessible at all, but it looks awesome.</p>
+				<p>Are you sure you want to enable it?</p>
+
+				<p class="text-xs">(You can always come here later and disable it!)</p>
+
+				<Button size="sm" onclick={() => setGeocities(true)} label="YES :>"></Button>
+				<Button size="sm" onclick={() => setGeocities(false)} label="No :("></Button>
+			</div>
+		{/if}
 	</div>
 </nav>
 
