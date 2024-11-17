@@ -31,7 +31,7 @@
 </svelte:head>
 
 <BaseLayout>
-	<div
+	<article
 		class="mx-auto flex max-w-3xl flex-col items-start justify-center border-zinc-200 px-4 pb-16 dark:border-zinc-700 sm:px-8"
 	>
 		<div class="flex flex-col-reverse items-start sm:flex-row mb-8">
@@ -89,5 +89,5 @@
 				</svg>
 			</a>
 		</section>
-	</div>
+	</article>
 </BaseLayout>

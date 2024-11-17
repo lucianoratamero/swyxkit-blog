@@ -10,11 +10,11 @@
 			background-image: url('/sparkle.gif') !important;
 		}
 
-		main, nav, footer {
+		article, nav, footer {
 			background-color: #0c0c0c;
 			border: 2px solid #fff !important;
 			border-radius: 1rem;
-			padding: 4rem 2rem;
+			padding: 2rem;
 		}
 
 		nav {
